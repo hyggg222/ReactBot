@@ -38,12 +38,23 @@ class TaskRequest(BaseModel):
 # --- Endpoints ---
 @app.get("/health")
 def health_check():
+    """
+    Health check endpoint to verify backend status.
+    Returns:
+        dict: Status message.
+    """
     return {"status": "ok", "mode": "refactored"}
 
 @app.post("/run-bot")
 def run_bot(req: TaskRequest):
     """
     Triggers the Facebook Bot with the specified task.
+    
+    Args:
+        req (TaskRequest): The task configuration payload.
+        
+    Returns:
+        dict: Success message and task details.
     """
     try:
         # Initialize Bot
