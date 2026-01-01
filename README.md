@@ -7,7 +7,7 @@ A hybrid Electron + Next.js + Python application for automating Facebook interac
 This project follows a modular Monorepo-style structure:
 
 ```
-bot_tt_facebook/
+ReactBot/
 ├── src/
 │   ├── main/               # Electron Main Process
 │   ├── renderer/           # Next.js Frontend (UI)
